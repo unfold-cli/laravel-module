@@ -1,0 +1,46 @@
+{
+    "name": "stub-vendor/stub-package",
+    "description": "{{ package_description }}",
+    "keywords": [
+        "stub-vendor",
+        "stub-package"
+    ],
+    "homepage": "https://github.com/stub-vendor/stub-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "{{ author_name }}",
+            "email": "{{ author_email }}"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StubVendor\\StubPackage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StubVendor\\StubPackage\\Tests\\": "src/Tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "StubVendor\\StubPackage\\Providers\\StubPackageServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+---
+exclude_paths:
+- '.circleci/**'
+- '**/tests/**'
+- '.git/**'
+- 'config/**'
+- 'data/**'
+- 'database/**'
+- 'routes/**'
+- 'tests/**'
+- 'vendor/**'
