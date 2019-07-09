@@ -17,6 +17,7 @@
         "php": "^7.1"
     },
     "require-dev": {
+        "larapack/dd": "^1.0",
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
@@ -26,7 +27,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "StubVendor\\StubPackage\\Tests\\": "src/Tests"
+            "StubVendor\\StubPackage\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -39,8 +40,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "StubVendor\\StubPackage\\Providers\\StubPackageServiceProvider"
-            ]
+                "StubVendor\\StubPackage\\StubPackageServiceProvider"
+            ],
+            "aliases": {
+                "StubPackage": "StubVendor\\StubPackage\\StubPackageFacade"
+            }
         }
     }
 }
