@@ -26,8 +26,9 @@ module.exports = {
         { replace: "StubPackage", with: '{{studly_case package_name}}' },
         { replace: "stub-vendor", with: '{{kebab_case vendor_name}}' },
         { replace: "StubVendor", with: '{{studly_case vendor_name}}' },
-        { replace: "StubPackages", with: '{{studly_case pluralize(package_name)}}' },
-        { replace: "stub_packages", with: '{{snake_case pluralize(package_name)}}' },
-        { replace: "stub-packages", with: '{{kebab_case pluralize(package_name)}}' },
+        { replace: "StubPackages", with: '{{pluralize studly_case package_name }}' },
+        { replace: "stub_packages", with: '{{pluralize snake_case package_name }}' },
+        { replace: "stub-packages", with: '{{pluralize kebab_case package_name }}' },
+
     ]
 };
