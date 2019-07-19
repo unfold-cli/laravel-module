@@ -21,7 +21,7 @@ class StubPackageServiceProvider extends ServiceProvider
         $this->registerMigrations();
         $this->registerTranslations();
 
-        Gate::policy(StubModel::class, Stub-modelPolicy::class);
+        Gate::policy(StubModel::class, StubModelPolicy::class);
 
 //        $this->registerDirectives();
     }

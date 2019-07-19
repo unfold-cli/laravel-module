@@ -10,7 +10,7 @@
 You can install the package via composer:
 
 ```bash
-composer require stub-vendor/package-stub
+composer require stub-vendor/stub-package
 ```
 
 ## Usage

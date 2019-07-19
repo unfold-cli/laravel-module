@@ -79,7 +79,7 @@ class StubModelsController extends Controller
      * @param  \StubVendor\StubPackage\Http\Requests\UpdateStubModelRequest  $request
      * @param  \StubVendor\StubPackage\Models\StubModel  $stub_package
      *
-     * @return \Jgile\Messenger\Message|\StubVendor\StubPackage\Http\Resources\Stub-modelResource
+     * @return \Jgile\Messenger\Message|\StubVendor\StubPackage\Http\Resources\StubModelResource
      * @throws \Exception
      */
     public function update(UpdateStubPackageRequest $request, StubModel $stub_package = null)

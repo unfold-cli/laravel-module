@@ -29,6 +29,8 @@ module.exports = {
         { replace: "stub_models", with: '{{pluralize snake_case resource_name }}' },
         { replace: "StubModel", with: '{{studly_case resource_name}}' },
         { replace: "StubModels", with: '{{pluralize studly_case resource_name }}' },
+        { replace: "stubModel", with: '{{camel_case resource_name }}' },
+        { replace: "stubModels", with: '{{pluralize camel_case resource_name }}' },
 
         // package
         { replace: "stub-package", with: '{{kebab_case package_name}}' },
