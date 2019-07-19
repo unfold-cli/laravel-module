@@ -31,6 +31,8 @@ module.exports = {
         { replace: "StubModels", with: '{{pluralize studly_case resource_name }}' },
         { replace: "stubModel", with: '{{camel_case resource_name }}' },
         { replace: "stubModels", with: '{{pluralize camel_case resource_name }}' },
+        { replace: "Stub Model", with: '{{title_case resource_name }}' },
+        { replace: "Stub Models", with: '{{pluralize title_case resource_name }}' },
 
         // package
         { replace: "stub-package", with: '{{kebab_case package_name}}' },
