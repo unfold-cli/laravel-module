@@ -1,0 +1,50 @@
+{
+    "name": "jgile/tasks",
+    "description": "Tasks",
+    "keywords": [
+        "jgile",
+        "tasks"
+    ],
+    "homepage": "https://github.com/jgile/tasks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John Gile",
+            "email": "john@gilemonster.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "larapack/dd": "^1.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jgile\\Tasks\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jgile\\Tasks\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jgile\\Tasks\\TasksServiceProvider"
+            ],
+            "aliases": {
+                "Tasks": "Jgile\\Tasks\\TasksFacade"
+            }
+        }
+    }
+}

@@ -22,17 +22,24 @@ module.exports = {
         ];
     },
     replacements: [
-        { replace: "StubModel", with: '{{studly_case resource_name}}' },
-        { replace: "StubModels", with: '{{pluralize studly_case resource_name}}' },
+        // model
+        { replace: "stub-model", with: '{{kebab_case resource_name}}' },
+        { replace: "stub-models", with: '{{pluralize kebab_case resource_name }}' },
         { replace: "stub_model", with: '{{snake_case resource_name}}' },
-        { replace: "stub_models", with: '{{pluralize snake_case resource_name}}' },
+        { replace: "stub_models", with: '{{pluralize snake_case resource_name }}' },
+        { replace: "StubModel", with: '{{studly_case resource_name}}' },
+        { replace: "StubModels", with: '{{pluralize studly_case resource_name }}' },
+
+        // package
         { replace: "stub-package", with: '{{kebab_case package_name}}' },
+        { replace: "stub-packages", with: '{{pluralize kebab_case package_name }}' },
         { replace: "stub_package", with: '{{snake_case package_name}}' },
-        { replace: "StubModel", with: '{{studly_case package_name}}' },
+        { replace: "stub_packages", with: '{{pluralize snake_case package_name }}' },
+        { replace: "StubPackage", with: '{{studly_case package_name}}' },
+        { replace: "StubPackages", with: '{{pluralize studly_case package_name }}' },
+
+        // vendor
         { replace: "stub-vendor", with: '{{kebab_case vendor_name}}' },
         { replace: "StubVendor", with: '{{studly_case vendor_name}}' },
-        { replace: "StubPackages", with: '{{pluralize studly_case package_name }}' },
-        { replace: "stub_packages", with: '{{pluralize snake_case package_name }}' },
-        { replace: "stub-packages", with: '{{pluralize kebab_case package_name }}' },
     ]
 };
