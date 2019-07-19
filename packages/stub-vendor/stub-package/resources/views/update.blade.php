@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-body">
                     @include("stub-model::partials.nav")
-                    <stub-model-form :stub-model="{{ json_encode($stub_model) }}" :fields="{{ json_encode($stub_model->getFormFields()) }}"></stub-model-form>
+                    <stub-model-form :stub-model="\{{ json_encode($stub_model) }}" :fields="\{{ json_encode($stub_model->getFormFields()) }}"></stub-model-form>
                 </div>
             </div>
         </div>

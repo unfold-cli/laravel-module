@@ -4,7 +4,7 @@
             <div slot-scope="{ result, isLoaded, isLoading, queryString }" :class="{'table-empty': !Number(result.total), 'table-loading':isLoading, 'table-loaded': isLoaded}">
                 <portal to="tableData">
                     <template slot-scope="{path}">
-                        <span class="table-data-item">{{ _get(result, path) }}</span>
+                        <span class="table-data-item">\{{ _get(result, path) }}</span>
                     </template>
                 </portal>
                 <portal to="tableSearch">
@@ -17,7 +17,7 @@
                     <form class="form-inline">
                         <div class="form-group">
                             <select v-model.number="query.perPage" class="form-control mr-2 pr-5">
-                                <option v-for="perPage in mergedConfig.perPage" :key="'perPage' + perPage" :value="perPage">{{ perPage }}</option>
+                                <option v-for="perPage in mergedConfig.perPage" :key="'perPage' + perPage" :value="perPage">\{{ perPage }}</option>
                             </select>
                         </div>
                     </form>
@@ -39,7 +39,7 @@
                             <template v-if="column.sortable">
                                 <data-sort-toggle :for="column.key" v-model="query.sort">
                                     <template slot-scope="{ isSortedAsc, isSortedDesc }">
-                                        {{ column.label }}
+                                        \{{ column.label }}
                                         <span v-if="isSortedAsc" class="fas fa-fw fa-sort-up"></span>
                                         <span v-if="isSortedDesc" class="fas fa-fw fa-sort-down">️</span>
                                         <span v-if="!isSortedDesc && !isSortedAsc" class="fas fa-fw fa-sort"></span>
@@ -47,7 +47,7 @@
                                 </data-sort-toggle>
                             </template>
                             <template v-else>
-                                <span class="column-title">{{ column.label }}</span>
+                                <span class="column-title">\{{ column.label }}</span>
                             </template>
                         </th>
                     </tr>
@@ -62,7 +62,7 @@
                             <tr>
                                 <td v-for="column in mergedConfig.columns">
                                     <slot :name="column.key" :row="item" :row-key="item_key" :query="query" :columns="mergedConfig.columns">
-                                        {{ item[column.key] }}
+                                        \{{ item[column.key] }}
                                     </slot>
                                 </td>
                             </tr>

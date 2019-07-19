@@ -1,5 +1,5 @@
 @extends("layouts.base")
-{{-- Update to extend your layout --}}
+\{{-- Update to extend your layout --}}
 
 @section('layout-content')
     <div class="container">
