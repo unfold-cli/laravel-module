@@ -3,9 +3,9 @@
 namespace StubVendor\StubPackage\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use StubVendor\StubPackage\Models\StubPackage;
+use StubVendor\StubPackage\Models\StubModel;
 
-class CreateStubPackageRequest extends FormRequest
+class CreateStubModelRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +14,7 @@ class CreateStubPackageRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->can('create', StubPackage::class);
+        return $this->user()->can('create', StubModel::class);
     }
 
     /**

@@ -1,16 +1,16 @@
 <?php
 
-use StubVendor\StubPackage\Http\Controllers\StubPackageController;
-use \StubVendor\StubPackage\Http\Controllers\Api\StubPackageController as ApiController;
+use StubVendor\StubPackage\Http\Controllers\StubModelsController;
+use StubVendor\StubPackage\Http\Controllers\Api\StubModelsController as ApiController;
 
 Route::group(['middleware' => ['web', 'auth'], 'as' => 'stub-vendor.'], function ($router) {
-    Route::resource('stub-packages', StubPackageController::class);
+    Route::resource('stub-models', StubModelsController::class);
 });
 
-Route::group(['middleware' => ['web', 'auth'], 'as' => 'stub-vendor.stub-packages.', 'prefix' => 'api/resources'], function ($router) {
-    Route::post('/stub-packages/action', ApiController::class."@action")->name('api.action');
-    Route::put('/stub-packages/{stub_package?}', ApiController::class."@update")->name('api.update');
-    Route::apiResource('stub-packages', ApiController::class)->except(['update'])->names([
+Route::group(['middleware' => ['web', 'auth'], 'as' => 'stub-vendor.stub-models.', 'prefix' => 'api/resources'], function ($router) {
+    Route::post('/stub-models/action', ApiController::class."@action")->name('api.action');
+    Route::put('/stub-models/{stub_package?}', ApiController::class."@update")->name('api.update');
+    Route::apiResource('stub-models', ApiController::class)->except(['update'])->names([
         'store' => 'api.store',
         'index' => 'api.index',
         'destroy' => 'api.destroy',

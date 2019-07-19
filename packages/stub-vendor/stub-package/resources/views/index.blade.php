@@ -1,7 +1,7 @@
-@extends("stub-package::layouts.base")
+@extends("stub-model::layouts.base")
 
 @section('title')
-    @lang('stub-package::stub-package.stub_packages')
+    @lang('stub-model::stub-model.stub_models')
 @endsection
 
 @section('content')
@@ -9,12 +9,12 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    @lang('stub-package::stub-package.stub_packages')
+                    @lang('stub-model::stub-model.stub_models')
                 </div>
 
                 <div class="card-body">
-                    @include("stub-package::partials.nav")
-                    <stub-package-table url="{{ route('stub-vendor.stub-packages.api.index') }}">
+                    @include("stub-model::partials.nav")
+                    <stub-model-table url="{{ route('stub-vendor.stub-models.api.index') }}">
                         {{-- By row --}}
                         {{-- <template slot-scope="{row}" slot="row">--}}
                         {{--     <tr>--}}
@@ -32,9 +32,9 @@
                             @{{ row.updated_at | date }}
                         </template>
                         <template slot-scope="{row}" slot="action">
-                            <a :href="'{{ route('stub-vendor.stub-packages.index') }}/' + row.id +'/edit'">Edit</a>
+                            <a :href="'{{ route('stub-vendor.stub-models.index') }}/' + row.id +'/edit'">Edit</a>
                         </template>
-                    </stub-package-table>
+                    </stub-model-table>
                 </div>
             </div>
         </div>

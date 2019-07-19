@@ -1,5 +1,5 @@
 <template>
-    <div class="stub-vendor-stub-package-table" v-loading="busy">
+    <div class="stub-vendor-stub-model-table" v-loading="busy">
         <with-data :source="getTableData" :query.sync="query" :history="mergedConfig.history" :query-string-defaults="{}">
             <div slot-scope="{ result, isLoaded, isLoading, queryString }" :class="{'table-empty': !Number(result.total), 'table-loading':isLoading, 'table-loaded': isLoaded}">
                 <portal to="tableData">

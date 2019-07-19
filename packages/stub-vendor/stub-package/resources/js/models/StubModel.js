@@ -1,7 +1,7 @@
 import Base from '../../../../../../resources/assets/js/models/Base';
 
-export default class StubPackage extends Base {
+export default class StubModel extends Base {
     resource() {
-        return 'stub-packages';
+        return 'stub-models';
     }
 }

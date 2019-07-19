@@ -4,7 +4,7 @@ namespace StubVendor\StubPackage\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class StubPackageResource extends JsonResource
+class StubModelResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

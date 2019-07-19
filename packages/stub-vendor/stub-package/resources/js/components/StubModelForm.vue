@@ -1,18 +1,18 @@
 <template>
-    <div class="stub-vendor-stub-package-form" v-loading="loadedStubPackage.busy">
+    <div class="stub-vendor-stub-model-form" v-loading="loadedStubModel.busy">
         <form class="form" @submit.prevent="save">
-            <t-form-fields v-model="loadedStubPackage" :fields="fields" :busy="loadedStubPackage.busy"></t-form-fields>
+            <t-form-fields v-model="loadedStubModel" :fields="fields" :busy="loadedStubModel.busy"></t-form-fields>
             <button class="btn btn-secondary" type="submit">Submit</button>
         </form>
     </div>
 </template>
 
 <script>
-    import StubPackage from "../models/StubPackage";
+    import StubModel from "../models/StubModel";
 
     export default {
         props: {
-            stubPackage: {
+            stubModel: {
                 type: Object
             },
             fields: {
@@ -21,20 +21,20 @@
         },
         data() {
             return {
-                loadedStubPackage: null,
+                loadedStubModel: null,
             };
         },
         methods: {
             save() {
-                this.loadedStubPackage.save();
+                this.loadedStubModel.save();
             }
         },
         watch: {
-            stubPackage: {
+            stubModel: {
                 deep: true,
                 immediate: true,
                 handler(newVal) {
-                    Vue.set(this, "loadedStubPackage", new StubPackage(newVal));
+                    Vue.set(this, "loadedStubModel", new StubModel(newVal));
                 }
             }
         }

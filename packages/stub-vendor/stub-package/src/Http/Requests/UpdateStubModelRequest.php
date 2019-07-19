@@ -4,7 +4,7 @@ namespace StubVendor\StubPackage\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateStubPackageRequest extends FormRequest
+class UpdateStubModelRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

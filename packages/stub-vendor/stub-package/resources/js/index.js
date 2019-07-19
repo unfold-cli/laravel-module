@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import "./models/StubPackage";
+import "./models/StubModel";
 
-import StubPackageForm from "./components/StubPackageForm";
-import StubPackageTable from "./components/StubPackageTable";
+import StubModelForm from "./components/StubModelForm";
+import StubModelTable from "./components/StubModelTable";
 
-Vue.component('stub-package-table', StubPackageTable);
-Vue.component('stub-package-form', StubPackageForm);
+Vue.component('stub-model-table', StubModelTable);
+Vue.component('stub-model-form', StubModelForm);

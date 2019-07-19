@@ -5,7 +5,7 @@ namespace StubVendor\StubPackage;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-use StubVendor\StubPackage\Models\StubPackage;
+use StubVendor\StubPackage\Models\StubModel;
 use StubVendor\StubPackage\Policies\StubPackagePolicy;
 
 class StubPackageServiceProvider extends ServiceProvider
@@ -21,7 +21,7 @@ class StubPackageServiceProvider extends ServiceProvider
         $this->registerMigrations();
         $this->registerTranslations();
 
-        Gate::policy(StubPackage::class, StubPackagePolicy::class);
+        Gate::policy(StubModel::class, Stub-modelPolicy::class);
 
 //        $this->registerDirectives();
     }
@@ -32,7 +32,7 @@ class StubPackageServiceProvider extends ServiceProvider
      */
     public function publishesConfig()
     {
-        $this->publishes([__DIR__.'/../config/stub-package.php' => config_path('stub-package.php')], ['stub-package', 'stub-package-config']);
+        $this->publishes([__DIR__.'/../config/stub-model.php' => config_path('stub-model.php')], ['stub-model', 'stub-model-config']);
     }
 
     /**
@@ -40,7 +40,7 @@ class StubPackageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/stub-package.php', 'stub-package');
+        $this->mergeConfigFrom(__DIR__.'/../config/stub-model.php', 'stub-model');
     }
 
 
@@ -57,8 +57,8 @@ class StubPackageServiceProvider extends ServiceProvider
      */
     public function registerViews()
     {
-        $this->publishes([__DIR__.'/../resources/views' => resource_path('views/vendor/stub-package')], ['stub-package', 'stub-package-views']);
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'stub-package');
+        $this->publishes([__DIR__.'/../resources/views' => resource_path('views/vendor/stub-model')], ['stub-model', 'stub-model-views']);
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'stub-model');
     }
 
 
@@ -68,7 +68,7 @@ class StubPackageServiceProvider extends ServiceProvider
     public function registerMigrations()
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        $this->publishes([__DIR__.'/../database/migrations' => database_path('migrations')], ['stub-package', 'stub-package-migrations']);
+        $this->publishes([__DIR__.'/../database/migrations' => database_path('migrations')], ['stub-model', 'stub-model-migrations']);
     }
 
 
@@ -77,8 +77,8 @@ class StubPackageServiceProvider extends ServiceProvider
      */
     public function registerTranslations()
     {
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'stub-package');
-        $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/vendor/stub-package')], ['stub-package', 'stub-package-lang']);
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'stub-model');
+        $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/vendor/stub-model')], ['stub-model', 'stub-model-lang']);
     }
 
 

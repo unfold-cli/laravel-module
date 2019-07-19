@@ -3,9 +3,9 @@
 namespace StubVendor\StubPackage\Repositories;
 
 use Jgile\LaravelRepositories\BaseRepository;
-use StubVendor\StubPackage\Models\StubPackage;
+use StubVendor\StubPackage\Models\StubModel;
 
-class StubPackageRepository extends BaseRepository
+class StubModelRepository extends BaseRepository
 {
 
     /**
@@ -17,12 +17,12 @@ class StubPackageRepository extends BaseRepository
     ];
 
     /**
-     * Specify StubPackage class name
+     * Specify StubModel class name
      *
      * @return string
      */
     protected function model(): string
     {
-        return StubPackage::class;
+        return StubModel::class;
     }
 }

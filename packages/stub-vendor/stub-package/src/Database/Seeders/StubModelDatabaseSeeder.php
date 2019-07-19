@@ -5,7 +5,7 @@ namespace Modules\StubPackage\Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-class StubPackageDatabaseSeeder extends Seeder
+class StubModelDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.

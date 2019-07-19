@@ -4,14 +4,14 @@ namespace StubVendor\StubPackage\Policies;
 
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
-use StubVendor\StubPackage\Models\StubPackage;
+use StubVendor\StubPackage\Models\StubModel;
 
-class StubPackagePolicy
+class StubModelPolicy
 {
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can list the StubPackage.
+     * Determine whether the user can list the StubModel.
      *
      * @param  \App\User  $user
      *
@@ -23,20 +23,20 @@ class StubPackagePolicy
     }
 
     /**
-     * Determine whether the user can view the StubPackage.
+     * Determine whether the user can view the StubModel.
      *
      * @param  \App\User  $user
-     * @param  \StubVendor\StubPackage\Models\StubPackage  $stub_package
+     * @param  \StubVendor\StubPackage\Models\StubModel  $stub_package
      *
      * @return mixed
      */
-    public function view(User $user, StubPackage $stub_package)
+    public function view(User $user, StubModel $stub_package)
     {
         return true;
     }
 
     /**
-     * Determine whether the user can create StubPackage.
+     * Determine whether the user can create StubModel.
      *
      * @param  \App\User  $user
      *
@@ -48,27 +48,27 @@ class StubPackagePolicy
     }
 
     /**
-     * Determine whether the user can update the StubPackage.
+     * Determine whether the user can update the StubModel.
      *
      * @param  \App\User  $user
-     * @param  \StubVendor\StubPackage\Models\StubPackage  $stub_package
+     * @param  \StubVendor\StubPackage\Models\StubModel  $stub_package
      *
      * @return mixed
      */
-    public function update(User $user, StubPackage $stub_package)
+    public function update(User $user, StubModel $stub_package)
     {
         return true;
     }
 
     /**
-     * Determine whether the user can delete the StubPackage.
+     * Determine whether the user can delete the StubModel.
      *
      * @param  \App\User  $user
-     * @param  \StubVendor\StubPackage\Models\StubPackage  $stub_package
+     * @param  \StubVendor\StubPackage\Models\StubModel  $stub_package
      *
      * @return mixed
      */
-    public function delete(User $user, StubPackage $stub_package)
+    public function delete(User $user, StubModel $stub_package)
     {
         return true;
     }

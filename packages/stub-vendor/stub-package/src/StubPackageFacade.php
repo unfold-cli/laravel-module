@@ -5,7 +5,7 @@ namespace StubVendor\StubPackage;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \StubVendor\StubPackage\StubPackageClass
+ * @see \StubVendor\StubPackage\StubModelClass
  */
 class StubPackageFacade extends Facade
 {
@@ -16,6 +16,6 @@ class StubPackageFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'stub-package';
+        return 'stub-model';
     }
 }

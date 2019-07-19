@@ -3,7 +3,7 @@
     "description": "{{ package_description }}",
     "keywords": [
         "stub-vendor",
-        "stub-package"
+        "stub-model"
     ],
     "homepage": "https://github.com/stub-vendor/stub-package",
     "license": "MIT",

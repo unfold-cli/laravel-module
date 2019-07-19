@@ -5,7 +5,7 @@ namespace StubVendor\StubPackage\Models;
 use Illuminate\Database\Eloquent\Model;
 use Jgile\LaravelVue\Traits\FormFields;
 
-class StubPackage extends Model
+class StubModel extends Model
 {
     use FormFields;
 

@@ -1,7 +1,7 @@
-@extends("stub-package::layouts.base")
+@extends("stub-model::layouts.base")
 
 @section('title')
-    @lang('stub-package::stub-package.create_stub_package')
+    @lang('stub-model::stub-model.create_stub_model')
 @endsection
 
 @section('content')
@@ -9,11 +9,11 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    @lang('stub-package::stub-package.create_stub_package')
+                    @lang('stub-model::stub-model.create_stub_model')
                 </div>
                 <div class="card-body">
-                    @include("stub-package::partials.nav")
-                    <stub-package-form :fields="{{ json_encode(\StubVendor\StubPackage\Models\StubPackage::getFormFields()) }}"></stub-package-form>
+                    @include("stub-model::partials.nav")
+                    <stub-model-form :fields="{{ json_encode(\StubVendor\StubModel\Models\StubModel::getFormFields()) }}"></stub-model-form>
                 </div>
             </div>
         </div>

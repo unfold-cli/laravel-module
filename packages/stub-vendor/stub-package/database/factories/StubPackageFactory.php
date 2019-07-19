@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use StubVendor\StubPackage\Models\StubPackage;
+use StubVendor\StubPackage\Models\StubModel;
 use Faker\Generator as Faker;
 
-$factory->define(StubPackage::class, function (Faker $faker) {
+$factory->define(StubModel::class, function (Faker $faker) {
     return [
         // fields
     ];

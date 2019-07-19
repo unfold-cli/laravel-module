@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStubPackagesTable extends Migration
+class CreateStubModelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateStubPackagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('stub_packages', function (Blueprint $table) {
+        Schema::create('stub_models', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('name');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateStubPackagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stub_packages');
+        Schema::dropIfExists('stub_models');
     }
 }

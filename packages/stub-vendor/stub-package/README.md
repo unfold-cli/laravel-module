@@ -16,7 +16,7 @@ composer require stub-vendor/package-stub
 ## Usage
 
 ``` php
-$stub_package = new StubVendor\StubPackage();
+$stub_package = new StubVendor\StubModel();
 echo $stub_package->echoPhrase('Hello, StubVendor!');
 ```
 
